@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga Advisor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header" id="top">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-left">
+                <a href="#top" class="brand">Yoga Advisor</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#results">Poses</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Yoga Advisor</h1>
+        <p class="tagline">Map body concerns to yoga poses across five styles, with food guidance.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Select your concern</h2>
+            <form id="concern-form" class="controls" autocomplete="off">
+                <label for="concern-select">Area or issue</label>
+                <select id="concern-select" required>
+                    <option value="" selected disabled>Choose a concern…</option>
+                    <option value="leg">Leg pain/tightness</option>
+                    <option value="hand">Hand/wrist strain</option>
+                    <option value="stomach">Stomach/digestion</option>
+                    <option value="back">Back pain</option>
+                    <option value="neck">Neck/shoulders</option>
+                </select>
+
+                <button type="submit" class="primary">Show poses</button>
+            </form>
+        </section>
+
+        <section id="results" class="card hidden" aria-live="polite">
+            <h2>Recommended Poses (5 Styles)</h2>
+            <div id="pose-list" class="pose-list"></div>
+        </section>
+
+        <section id="food" class="card hidden" aria-live="polite">
+            <h2>Food Guidance</h2>
+            <div id="food-guidance"></div>
+        </section>
+
+        <section class="card note">
+            <strong>Medical disclaimer:</strong>
+            <p>
+                This app provides general wellness information and is not a substitute for professional medical advice.
+                If you have acute pain, injury, recent surgery, pregnancy, high blood pressure, vertigo, or chronic conditions,
+                consult a qualified professional before practicing. Skip any pose that causes pain.
+            </p>
+        </section>
+
+        <section id="about" class="card">
+            <h2>About</h2>
+            <p>
+                Yoga Advisor suggests gentle, alignment-focused poses across five yoga styles and simple nutrition pointers.
+                It is designed for learning and wellness exploration.
+            </p>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Questions or feedback? Email: <a href="mailto:hello@yogadvisor.local">hello@yogadvisor.local</a></p>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <span>© <span id="year"></span> Yoga Advisor</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
